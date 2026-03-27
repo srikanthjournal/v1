@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.org/index.html</loc></url>
+  <url><loc>https://example.org/CurrentIssue.html</loc></url>
+  <url><loc>https://example.org/Archives.html</loc></url>
+  <url><loc>https://example.org/IssueView.html</loc></url>
+  <url><loc>https://example.org/Article-DeepLearning.html</loc></url>
+  <url><loc>https://example.org/Article-SmartCities.html</loc></url>
+  <url><loc>https://example.org/Article-NLP.html</loc></url>
+  <url><loc>https://example.org/SubmitPaper.html</loc></url>
+  <url><loc>https://example.org/AimScope.html</loc></url>
+  <url><loc>https://example.org/EditorialBoard.html</loc></url>
+  <url><loc>https://example.org/AuthorGuidelines.html</loc></url>
+  <url><loc>https://example.org/ReviewProcess.html</loc></url>
+  <url><loc>https://example.org/PublicationEthics.html</loc></url>
+  <url><loc>https://example.org/OpenAccess.html</loc></url>
+  <url><loc>https://example.org/ReviewerSignup.html</loc></url>
+  <url><loc>https://example.org/ReviewerRecognition.html</loc></url>
+  <url><loc>https://example.org/Contact.html</loc></url>
+</urlset>
