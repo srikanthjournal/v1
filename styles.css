@@ -2093,15 +2093,171 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .top-auth a {
-  color: #eaf1ff !important;
+  color: #ffffff !important;
   text-decoration: none !important;
   font-size: 12px !important;
-  font-weight: 600 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .top-auth a:hover {
   color: #ffffff !important;
   text-decoration: underline !important;
+}
+
+.top-auth .top-sep {
+  color: #eef4ff !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+}
+
+/* Final brand color alignment from logo icon */
+:root {
+  --brand-blue: #1f6fbb;
+  --brand-blue-dark: #114c88;
+  --brand-blue-soft: #eaf3fb;
+  --brand-green: #73bf39;
+  --brand-green-dark: #3f8f2d;
+  --brand-green-soft: #eef8e8;
+}
+
+.top-strip,
+.main-header .btn-primary,
+.recent .btn-outline.small,
+.recent a.btn-outline.small,
+.back-top,
+.scroll-progress span {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-blue-dark)) !important;
+}
+
+.main-header .logo-group h1,
+.section-title::after,
+.issue-head h3::after,
+.quick-stats-grid article i,
+.metric,
+.feature-banner-slide small,
+.breadcrumbs a,
+.hero-meta,
+.top-auth a,
+.main-header .menu-toggle span {
+  color: var(--brand-blue) !important;
+}
+
+.main-header .logo-group h1::after,
+.main-header .nav-link::after,
+.main-header .nav-parent::before,
+body:not(.home-plus) .section-title::after,
+body:not(.home-plus) .issue-head h3::after {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-green)) !important;
+}
+
+.btn-light,
+.weeks,
+.feature-banner-controls button:hover,
+.hero-slider-controls button:hover,
+.quick-stats-controls button:hover {
+  background: var(--brand-green-soft) !important;
+  border-color: #cfe4bf !important;
+  color: var(--brand-green-dark) !important;
+}
+
+.btn-light {
+  background: linear-gradient(135deg, #8cd34a, #63ad34) !important;
+  border-color: #67ae37 !important;
+  color: #133017 !important;
+}
+
+.btn-light:hover {
+  background: linear-gradient(135deg, #80c542, #579a2d) !important;
+  color: #102912 !important;
+}
+
+.main-header .nav-link:hover,
+.main-header .nav-link.active,
+.main-header .nav-parent:hover,
+.main-header .nav-item.open .nav-parent,
+.main-header .nav-item.active .nav-parent,
+.main-header .submenu a:hover,
+.main-header .submenu a.active,
+.mobile-mini a:hover,
+.mobile-mini a.active {
+  background: linear-gradient(135deg, var(--brand-blue-soft), #f4f9ff) !important;
+  color: var(--brand-blue-dark) !important;
+}
+
+.feature-banner {
+  background: linear-gradient(180deg, #f6fbff, #eef7ff) !important;
+}
+
+.pub-highlights-grid strong,
+.quick-stats-grid h3 {
+  color: var(--brand-blue) !important;
+}
+
+.indexed {
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-blue-dark)) !important;
+}
+
+.indexed .index-grid span,
+.feature-banner-slide,
+.pub-highlights-grid article {
+  border-color: rgba(31, 111, 187, 0.18) !important;
+}
+
+.feature-banner-controls button,
+.hero-slider-controls button,
+.quick-stats-controls button,
+.main-header .menu-toggle {
+  color: var(--brand-blue-dark) !important;
+}
+
+.feature-banner-controls button,
+.hero-slider-controls button,
+.quick-stats-controls button {
+  border-color: #bfd3ea !important;
+  background: #ffffff !important;
+}
+
+.ticker-bar {
+  background: #e7be3e !important;
+  color: #2a2f39 !important;
+  border-top-color: #d8af2f !important;
+  border-bottom-color: #d8af2f !important;
+}
+
+/* Final top auth visibility fix */
+.top-strip .top-row {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.top-strip .top-auth {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-left: auto !important;
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+.top-strip .top-auth a,
+.top-strip .top-auth a:visited {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  text-decoration: none !important;
+}
+
+.top-strip .top-auth .top-sep {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .main-header {
