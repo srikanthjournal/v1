@@ -34,7 +34,7 @@
     if (topRow && !topRow.querySelector('.top-auth')) {
       const auth = document.createElement('div');
       auth.className = 'top-auth';
-      auth.innerHTML = '<a href="Login.html">Login</a><span class="top-sep">|</span><a href="Login.html#register">Register</a>';
+      auth.innerHTML = '<a href="Login.html">Login</a><span class="top-sep">|</span><a href="Register.html">Register</a>';
       topRow.appendChild(auth);
     }
 
@@ -491,6 +491,7 @@
     window.lucide.createIcons();
   }
 })();
+
 
 
 

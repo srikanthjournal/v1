@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IJSRI - Author Login</title>
-    <meta name="description" content="Author login portal for IJSRI editorial management services.">
+    <title>IJSRI - Register</title>
+    <meta name="description" content="Create your IJSRI author or reviewer account.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <meta property="og:title" content="IJSRI - Author Login">
-    <meta property="og:description" content="Access your manuscript dashboard and editorial account.">
+    <meta property="og:title" content="IJSRI - Register">
+    <meta property="og:description" content="Register for manuscript submission and editorial communication.">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#315D8A">
     <script type="application/ld+json">
@@ -84,36 +84,36 @@
     <section class="ems-login-shell">
       <div class="container ems-login-grid">
         <aside class="ems-login-intro card">
-          <span class="pill">Editorial Management System</span>
-          <h2>Author Login</h2>
-          <p>Access your manuscript dashboard, check editorial progress, and manage communication with the journal office.</p>
+          <span class="pill">Create Your Account</span>
+          <h2>Register with IJSRI</h2>
+          <p>Open your author or reviewer account to submit manuscripts, track paper progress, and receive journal notifications.</p>
           <div class="ems-quick-actions">
-            <a class="ems-quick-card" href="SubmitPaper.html">
-              <i data-lucide="file-plus-2"></i>
+            <div class="ems-quick-card">
+              <i data-lucide="user-plus"></i>
               <div>
-                <strong>Submit Paper</strong>
-                <span>Start a new manuscript submission</span>
+                <strong>Author Profile</strong>
+                <span>Create your profile for paper submission and communication.</span>
               </div>
-            </a>
-            <a class="ems-quick-card" href="CurrentIssue.html#current-issue-search">
-              <i data-lucide="search"></i>
+            </div>
+            <div class="ems-quick-card">
+              <i data-lucide="badge-check"></i>
               <div>
-                <strong>Check Status</strong>
-                <span>Review current issue and search records</span>
+                <strong>Reviewer Option</strong>
+                <span>Register and later apply for reviewer onboarding if eligible.</span>
               </div>
-            </a>
-            <a class="ems-quick-card" href="ReviewerSignup.html">
-              <i data-lucide="user-round-check"></i>
+            </div>
+            <div class="ems-quick-card">
+              <i data-lucide="shield-check"></i>
               <div>
-                <strong>Reviewer Access</strong>
-                <span>Apply to join the reviewer community</span>
+                <strong>Secure Access</strong>
+                <span>Manage manuscripts, updates, and editorial notifications in one place.</span>
               </div>
-            </a>
+            </div>
           </div>
           <div class="ems-support-band">
             <div>
-              <small>Need help?</small>
-              <p>Contact the editorial office at <a href="mailto:editor@ijsri.org">editor@ijsri.org</a></p>
+              <small>Already registered?</small>
+              <p>Return to the sign-in portal and access your dashboard. <a href="Login.html">Go to Login</a></p>
             </div>
           </div>
         </aside>
@@ -121,53 +121,77 @@
         <section class="ems-login-panel card">
           <div class="ems-panel-head">
             <div>
-              <small>Account Access</small>
-              <h3>Sign in to your dashboard</h3>
-              <p>Choose your preferred login method and continue to your author workspace.</p>
+              <small>Registration Form</small>
+              <h3>Create your journal account</h3>
+              <p>Fill in your details below to register as an author, reviewer, or institutional member.</p>
             </div>
           </div>
 
-          <div class="ems-method-switch" role="tablist" aria-label="Login methods">
-            <button class="is-active" type="button" data-login-tab="password" aria-selected="true">Password</button>
-            <button type="button" data-login-tab="otp" aria-selected="false">Email OTP</button>
-          </div>
+          <form class="ems-login-form ems-register-form" novalidate>
+            <div class="ems-form-split">
+              <label>
+                First Name*
+                <input type="text" placeholder="First name" required>
+              </label>
+              <label>
+                Last Name*
+                <input type="text" placeholder="Last name" required>
+              </label>
+            </div>
 
-          <form class="ems-login-form" novalidate>
+            <div class="ems-form-split">
+              <label>
+                Register As*
+                <select required>
+                  <option value="">Select role</option>
+                  <option>Author</option>
+                  <option>Reviewer</option>
+                  <option>Institutional Member</option>
+                </select>
+              </label>
+              <label>
+                Country*
+                <input type="text" placeholder="Country" required>
+              </label>
+            </div>
+
             <label>
               Email Address*
               <input type="email" placeholder="your.email@example.com" required>
             </label>
 
-            <div data-login-pane="password">
+            <label>
+              Affiliation / Institution*
+              <input type="text" placeholder="University, institute, or organization" required>
+            </label>
+
+            <div class="ems-form-split">
               <label>
-                Password*
-                <input type="password" placeholder="Enter your password" required>
+                Create Password*
+                <input type="password" placeholder="Create password" required>
+              </label>
+              <label>
+                Confirm Password*
+                <input type="password" placeholder="Confirm password" required>
               </label>
             </div>
 
-            <div data-login-pane="otp" hidden>
-              <label>
-                Email OTP*
-                <input type="text" placeholder="Enter OTP sent to your email">
-              </label>
-            </div>
+            <label class="auth-check">
+              <input type="checkbox" required>
+              <span>I agree to the journal policies and author submission terms.</span>
+            </label>
 
-            <div class="ems-login-meta">
-              <label class="auth-check"><input type="checkbox"> <span>Remember me</span></label>
-              <a class="auth-link" href="#">Forgot Password?</a>
-            </div>
-
-            <button class="btn-primary ems-login-btn" type="submit">Login</button>
+            <button class="btn-primary ems-login-btn" type="submit">Create Account</button>
           </form>
 
-          <div class="ems-divider"><span>or</span></div>
+          <div class="ems-divider"><span>already have access?</span></div>
 
           <div class="ems-register-callout">
-            <h4>Don't have an account?</h4>
-            <p>Create an author profile to submit papers, track status, and receive editorial updates.</p>
+            <h4>Sign in to continue</h4>
+            <p>If you already have an account, return to the login portal and access your journal dashboard.</p>
             <div class="ems-register-actions">
-              <a class="btn-outline" href="Register.html">Create Account</a>
-              <a class="btn-outline" href="ReviewerSignup.html">Apply as Reviewer</a>
+              <a class="btn-outline" href="Login.html">Back to Login</a>
+              <a class="btn-outline" href="SubmitPaper.html">Go to Submission</a>
             </div>
           </div>
         </section>
@@ -209,28 +233,5 @@
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="nav.js"></script>
-    <script>
-      (function () {
-        const tabs = document.querySelectorAll('[data-login-tab]');
-        const panes = document.querySelectorAll('[data-login-pane]');
-
-        tabs.forEach((tab) => {
-          tab.addEventListener('click', () => {
-            const target = tab.getAttribute('data-login-tab');
-
-            tabs.forEach((item) => {
-              const active = item === tab;
-              item.classList.toggle('is-active', active);
-              item.setAttribute('aria-selected', active ? 'true' : 'false');
-            });
-
-            panes.forEach((pane) => {
-              pane.hidden = pane.getAttribute('data-login-pane') !== target;
-            });
-          });
-        });
-      }());
-    </script>
   </body>
 </html>
-
