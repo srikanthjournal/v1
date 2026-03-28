@@ -34,7 +34,7 @@
     if (topRow && !topRow.querySelector('.top-auth')) {
       const auth = document.createElement('div');
       auth.className = 'top-auth';
-      auth.innerHTML = '<a href="#">Login</a><span class="top-sep">|</span><a href="#">Register</a>';
+      auth.innerHTML = '<a href="Login.html">Login</a><span class="top-sep">|</span><a href="Login.html#register">Register</a>';
       topRow.appendChild(auth);
     }
 

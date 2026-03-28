@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IJSRI - Login</title>
+    <meta name="description" content="Login or create an account for IJSRI journal services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta property="og:title" content="IJSRI - Login">
+    <meta property="og:description" content="Access your journal account and author services.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#315D8A">
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Organization","name":"IJSRI","url":"https://example.org","email":"editor@ijsri.org"}
+    </script>
+  </head>
+  <body>
+    <div class="top-strip">
+      <div class="container top-row">
+        <p>e-ISSN: 2024-0001 | p-ISSN: 2024-0002</p>
+      </div>
+    </div>
+    <header class="main-header">
+      <div class="container header-row">
+        <a class="logo-group" href="index.html">
+          <span class="logo-inline-icon"><img src="header-icon.svg" alt="Journal icon"></span>
+          <h1>International Journal of Scientific Research and Innovation</h1>
+        </a>
+        <a class="btn-primary header-submit" href="SubmitPaper.html">Submit Paper</a>
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="container mobile-mini">
+        <a href="index.html"><i data-lucide="house"></i><span>Home</span></a>
+        <a href="CurrentIssue.html"><i data-lucide="newspaper"></i><span>Issue</span></a>
+        <a href="SubmitPaper.html"><i data-lucide="send"></i><span>Submit</span></a>
+      </div>
+      <div class="container nav-row">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="CurrentIssue.html">Current Issue</a>
+        <a class="nav-link" href="Archives.html">Archives</a>
+        <div class="nav-item has-submenu">
+          <button class="nav-parent" type="button" aria-expanded="false">About</button>
+          <div class="submenu">
+            <a href="AimScope.html">Aim & Scope</a>
+            <a href="EditorialBoard.html">Editorial Board</a>
+            <a href="Contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="nav-item has-submenu">
+          <button class="nav-parent" type="button" aria-expanded="false">For Authors</button>
+          <div class="submenu">
+            <a href="AuthorGuidelines.html">Author Guidelines</a>
+            <a href="ReviewProcess.html">Review Process</a>
+            <a href="PublicationEthics.html">Publication Ethics</a>
+            <a href="ReviewerSignup.html">Reviewer Signup</a>
+            <a href="ReviewerRecognition.html">Reviewer Recognition</a>
+          </div>
+        </div>
+        <a class="nav-link" href="SubmitPaper.html">Submit Paper</a>
+      </div>
+    </header>
+    <section class="page-hero">
+      <div class="container">
+        <span class="pill">Account Access</span>
+        <h2>Login</h2>
+        <p>Access author submissions, review updates, and your journal account dashboard.</p>
+      </div>
+    </section>
+    <section class="page-content auth-page">
+      <div class="container grid-2">
+        <section class="card auth-card">
+          <h3>Member Login</h3>
+          <p>Sign in to continue to your submission and review workspace.</p>
+          <form class="form-grid" novalidate>
+            <div class="full">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="full">
+              <label>Password</label>
+              <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="full auth-actions-row">
+              <label class="auth-check"><input type="checkbox"> <span>Keep me signed in</span></label>
+              <a class="auth-link" href="#">Forgot password?</a>
+            </div>
+            <div class="full">
+              <button class="btn-primary" type="submit">Login</button>
+            </div>
+          </form>
+        </section>
+        <aside class="card auth-card" id="register">
+          <h3>Create Account</h3>
+          <p>Register as an author or reviewer to manage submissions and editorial communication.</p>
+          <form class="form-grid" novalidate>
+            <div>
+              <label>Full Name</label>
+              <input type="text" placeholder="Your full name" required>
+            </div>
+            <div>
+              <label>Role</label>
+              <select required>
+                <option value="">Select role</option>
+                <option>Author</option>
+                <option>Reviewer</option>
+                <option>Reader</option>
+              </select>
+            </div>
+            <div class="full">
+              <label>Email Address</label>
+              <input type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="full">
+              <label>Create Password</label>
+              <input type="password" placeholder="Create a secure password" required>
+            </div>
+            <div class="full">
+              <button class="btn-outline" type="submit">Register</button>
+            </div>
+          </form>
+        </aside>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h5>IJSRI</h5>
+          <p>International Journal of Scientific Research and Innovation is a peer-reviewed, open-access journal dedicated to publishing high-quality research across scientific disciplines.</p>
+          <small>e-ISSN: 2024-0001 | p-ISSN: 2024-0002</small>
+        </div>
+        <div>
+          <h6>Quick Links</h6>
+          <a href="index.html">Home</a>
+          <a href="CurrentIssue.html">Current Issue</a>
+          <a href="Archives.html">Archives</a>
+          <a href="SubmitPaper.html">Submit Paper</a>
+          <a href="Contact.html">Contact</a>
+        </div>
+        <div>
+          <h6>For Authors</h6>
+          <a href="AuthorGuidelines.html">Author Guidelines</a>
+          <a href="ReviewProcess.html">Review Process</a>
+          <a href="PublicationEthics.html">Publication Ethics</a>
+          <a href="ReviewerSignup.html">Reviewer Signup</a>
+          <a href="ReviewerRecognition.html">Reviewer Recognition</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2026 IJSRI. All rights reserved.</p>
+        <div>
+          <a href="PublicationEthics.html">Privacy Policy</a>
+          <a href="ReviewerSignup.html">Reviewer Signup</a>
+          <a href="ReviewerRecognition.html">Reviewer Recognition</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="nav.js"></script>
+  </body>
+</html>
