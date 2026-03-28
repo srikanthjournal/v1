@@ -45,7 +45,7 @@
     const logoGroup = document.querySelector('.logo-group');
     const logoSubline = document.querySelector('.logo-group p');
     const logoImage = document.querySelector('.logo-mark');
-    if (logoHeading) logoHeading.textContent = 'International Journal of Scientific Research & Innovation';
+    if (logoHeading) logoHeading.textContent = 'International Journal of Scientific Research and Innovation';
     if (logoSubline) logoSubline.remove();
     if (logoImage) logoImage.remove();
     if (logoGroup && !logoGroup.querySelector('.logo-inline-icon')) {

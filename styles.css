@@ -2072,6 +2072,18 @@ h1, h2, h3, h4, h5, h6,
   color: #eaf1ff !important;
 }
 
+.top-strip,
+.top-row,
+.top-row p,
+.top-auth a {
+  font-size: 12px !important;
+}
+
+.top-row {
+  min-height: 28px !important;
+  justify-content: center !important;
+}
+
 .main-header {
   z-index: 400 !important;
   overflow: visible !important;
