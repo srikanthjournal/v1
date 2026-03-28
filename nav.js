@@ -41,19 +41,6 @@
     const headerRow = document.querySelector('.header-row');
     const header = document.querySelector('.main-header');
     headerRow?.querySelector('.header-search')?.remove();
-    const logoHeading = document.querySelector('.logo-group h1');
-    const logoGroup = document.querySelector('.logo-group');
-    const logoSubline = document.querySelector('.logo-group p');
-    const logoImage = document.querySelector('.logo-mark');
-    if (logoHeading) logoHeading.textContent = 'International Journal of Scientific Research and Innovation';
-    if (logoSubline) logoSubline.remove();
-    if (logoImage) logoImage.remove();
-    if (logoGroup && !logoGroup.querySelector('.logo-inline-icon')) {
-      const icon = document.createElement('span');
-      icon.className = 'logo-inline-icon';
-      icon.innerHTML = '<img src="header-icon.svg" alt="Journal icon">';
-      logoGroup.insertBefore(icon, logoGroup.firstChild);
-    }
 
     if (header && !header.nextElementSibling?.classList.contains('ticker-bar')) {
       const ticker = document.createElement('div');
@@ -182,8 +169,8 @@
 
     document.body.classList.add('home-plus');
 
-    const quickStats = document.querySelector('.quick-stats');
-    if (quickStats && !document.querySelector('.feature-banner')) {
+    if (!document.querySelector('.feature-banner')) {
+      const anchor = document.querySelector('.ticker-bar') || document.querySelector('.main-header');
       const banner = document.createElement('section');
       banner.className = 'feature-banner';
       banner.innerHTML = `
@@ -210,7 +197,23 @@
             <button type="button" class="fb-next" aria-label="Next banner slide">></button>
           </div>
         </div>`;
-      quickStats.insertAdjacentElement('beforebegin', banner);
+      anchor?.insertAdjacentElement('afterend', banner);
+    }
+
+    let quickStats = document.querySelector('.quick-stats');
+    if (!quickStats) {
+      const banner = document.querySelector('.feature-banner');
+      const stats = document.createElement('section');
+      stats.className = 'quick-stats';
+      stats.innerHTML = `
+        <div class="container quick-stats-grid">
+          <article><i data-lucide="file-text"></i><h3>24</h3><p>Published Papers</p></article>
+          <article><i data-lucide="users"></i><h3>38</h3><p>Authors</p></article>
+          <article><i data-lucide="globe-2"></i><h3>6</h3><p>Countries</p></article>
+          <article><i data-lucide="clock-3"></i><h3>18</h3><p>Review Hours</p></article>
+        </div>`;
+      banner?.insertAdjacentElement('afterend', stats);
+      quickStats = stats;
     }
 
     const featureBanner = document.querySelector('.feature-banner-slider');
@@ -248,47 +251,6 @@
 
       renderFeature();
       startFeature();
-    }
-
-    const heroSlider = document.querySelector('.hero-slider');
-    const heroSlides = heroSlider ? Array.from(heroSlider.querySelectorAll('.hero-slide')) : [];
-    if (heroSlider && heroSlides.length > 1 && !heroSlider.nextElementSibling?.classList.contains('hero-slider-controls')) {
-      const controls = document.createElement('div');
-      controls.className = 'hero-slider-controls';
-      controls.innerHTML = '<button type="button" class="hero-prev" aria-label="Previous slide"><</button><button type="button" class="hero-next" aria-label="Next slide">></button>';
-      heroSlider.insertAdjacentElement('afterend', controls);
-
-      let heroIndex = 0;
-      let heroTimer;
-
-      const renderHero = () => {
-        heroSlides.forEach((slide, i) => {
-          slide.classList.toggle('is-active', i === heroIndex);
-        });
-      };
-
-      const nextHero = () => {
-        heroIndex = (heroIndex + 1) % heroSlides.length;
-        renderHero();
-      };
-
-      const prevHero = () => {
-        heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
-        renderHero();
-      };
-
-      const startHero = () => {
-        clearInterval(heroTimer);
-        heroTimer = window.setInterval(nextHero, 3600);
-      };
-
-      controls.querySelector('.hero-next')?.addEventListener('click', () => { nextHero(); startHero(); });
-      controls.querySelector('.hero-prev')?.addEventListener('click', () => { prevHero(); startHero(); });
-      heroSlider.addEventListener('mouseenter', () => clearInterval(heroTimer));
-      heroSlider.addEventListener('mouseleave', startHero);
-
-      renderHero();
-      startHero();
     }
 
     if (quickStats && !document.querySelector('.pub-highlights')) {
