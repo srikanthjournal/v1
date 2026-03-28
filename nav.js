@@ -38,15 +38,21 @@
       topRow.appendChild(auth);
     }
 
-    const header = document.querySelector('.main-header');
     const headerRow = document.querySelector('.header-row');
-    if (headerRow && !headerRow.querySelector('.header-search')) {
-      const search = document.createElement('form');
-      search.className = 'header-search';
-      search.setAttribute('role', 'search');
-      search.innerHTML = '<input type="search" placeholder="Search..." aria-label="Search"><button type="submit">Search</button>';
-      headerRow.appendChild(search);
-      search.addEventListener('submit', (e) => e.preventDefault());
+    const header = document.querySelector('.main-header');
+    headerRow?.querySelector('.header-search')?.remove();
+    const logoHeading = document.querySelector('.logo-group h1');
+    const logoGroup = document.querySelector('.logo-group');
+    const logoSubline = document.querySelector('.logo-group p');
+    const logoImage = document.querySelector('.logo-mark');
+    if (logoHeading) logoHeading.textContent = 'International Journal of Scientific Research & Innovation';
+    if (logoSubline) logoSubline.remove();
+    if (logoImage) logoImage.remove();
+    if (logoGroup && !logoGroup.querySelector('.logo-inline-icon')) {
+      const icon = document.createElement('span');
+      icon.className = 'logo-inline-icon';
+      icon.innerHTML = '<img src="header-icon.svg" alt="Journal icon">';
+      logoGroup.insertBefore(icon, logoGroup.firstChild);
     }
 
     if (header && !header.nextElementSibling?.classList.contains('ticker-bar')) {
@@ -139,45 +145,22 @@
     const oldChips = content.querySelector('.status-chips');
     if (oldChips) oldChips.remove();
 
-    if (!content.querySelector('.hero-actions')) {
-      const existingPrimary = content.querySelector('.btn-light');
-      const actions = document.createElement('div');
-      actions.className = 'hero-actions';
-      if (existingPrimary) {
-        existingPrimary.textContent = 'Submit Paper';
-        actions.appendChild(existingPrimary);
-      } else {
-        actions.innerHTML = '<a class="btn-light" href="SubmitPaper.html">Submit Paper</a>';
-      }
-      const secondary = document.createElement('a');
-      secondary.className = 'btn-outline';
-      secondary.href = 'Archives.html';
-      secondary.textContent = 'Browse Archives';
-      actions.appendChild(secondary);
-      const small = content.querySelector('small');
-      if (small) {
-        small.insertAdjacentElement('beforebegin', actions);
-      } else {
-        content.appendChild(actions);
-      }
-    }
-
-
-    if (!content.querySelector('.hero-trust')) {
-      const trust = document.createElement('div');
-      trust.className = 'hero-trust';
-            trust.innerHTML = `
-        <span class="trust-label">Trusted Indexing:</span>
-        <span class="trust-badge crossref"><i data-lucide="link-2"></i><em>Crossref</em></span>
-        <span class="trust-badge doaj"><i data-lucide="book-open-check"></i><em>DOAJ</em></span>
-        <span class="trust-badge scopus"><i data-lucide="orbit"></i><em>Scopus</em></span>
-        <span class="trust-badge scholar"><i data-lucide="graduation-cap"></i><em>Google Scholar</em></span>
-      `;
-      const actions = content.querySelector('.hero-actions');
-      if (actions) {
-        actions.insertAdjacentElement('afterend', trust);
-      } else {
-        content.appendChild(trust);
+    content.querySelector('.hero-actions')?.remove();
+    content.querySelector('.hero-trust')?.remove();
+    content.querySelector('.btn-light')?.remove();
+    if (!content.querySelector('.hero-slider')) {
+      const title = content.querySelector('h2');
+      if (title) {
+        const slider = document.createElement('div');
+        slider.className = 'hero-slider';
+        slider.setAttribute('role', 'region');
+        slider.setAttribute('aria-label', 'Hero highlights');
+        slider.innerHTML = `
+          <article class="hero-slide is-active"><h2>International Journal<br>of Scientific Research<br>& Innovation</h2></article>
+          <article class="hero-slide"><h2>International Journal<br>of Scientific Research<br>& Innovation</h2></article>
+          <article class="hero-slide"><h2>International Journal<br>of Scientific Research<br>& Innovation</h2></article>
+        `;
+        title.replaceWith(slider);
       }
     }
     if (!document.querySelector('.quick-stats')) {
@@ -185,10 +168,10 @@
       section.className = 'quick-stats';
       section.innerHTML = `
         <div class="container quick-stats-grid">
-          <article><h3>0</h3><p>Published Papers</p></article>
-          <article><h3>0</h3><p>Authors</p></article>
-          <article><h3>0</h3><p>Countries</p></article>
-          <article><h3>0</h3><p>Review Hours</p></article>
+          <article><i data-lucide="file-text"></i><h3>24</h3><p>Published Papers</p></article>
+          <article><i data-lucide="users"></i><h3>38</h3><p>Authors</p></article>
+          <article><i data-lucide="globe-2"></i><h3>6</h3><p>Countries</p></article>
+          <article><i data-lucide="clock-3"></i><h3>18</h3><p>Review Hours</p></article>
         </div>`;
       hero.insertAdjacentElement('afterend', section);
     }
@@ -200,6 +183,114 @@
     document.body.classList.add('home-plus');
 
     const quickStats = document.querySelector('.quick-stats');
+    if (quickStats && !document.querySelector('.feature-banner')) {
+      const banner = document.createElement('section');
+      banner.className = 'feature-banner';
+      banner.innerHTML = `
+        <div class="container">
+          <div class="feature-banner-slider" role="region" aria-label="Featured journal highlights">
+            <article class="feature-banner-slide is-active">
+              <small>Call For Papers</small>
+              <h2>Submit original research for our upcoming quarterly issue.</h2>
+              <p>Open access publishing with peer review, editorial support, and visibility for accepted papers.</p>
+            </article>
+            <article class="feature-banner-slide">
+              <small>Scope Of Journal</small>
+              <h2>Science, engineering, innovation, and interdisciplinary research publication.</h2>
+              <p>A professional platform for scholars, faculty members, and early-career researchers.</p>
+            </article>
+            <article class="feature-banner-slide">
+              <small>Publishing Support</small>
+              <h2>Clear author guidelines, responsive updates, and issue-based publication workflow.</h2>
+              <p>Designed to keep submission, review, and final publication structured and straightforward.</p>
+            </article>
+          </div>
+          <div class="feature-banner-controls">
+            <button type="button" class="fb-prev" aria-label="Previous banner slide"><</button>
+            <button type="button" class="fb-next" aria-label="Next banner slide">></button>
+          </div>
+        </div>`;
+      quickStats.insertAdjacentElement('beforebegin', banner);
+    }
+
+    const featureBanner = document.querySelector('.feature-banner-slider');
+    const featureSlides = featureBanner ? Array.from(featureBanner.querySelectorAll('.feature-banner-slide')) : [];
+    const featureControls = document.querySelector('.feature-banner-controls');
+    if (featureBanner && featureControls && featureSlides.length > 1) {
+      let featureIndex = 0;
+      let featureTimer;
+
+      const renderFeature = () => {
+        featureSlides.forEach((slide, i) => {
+          slide.classList.toggle('is-active', i === featureIndex);
+        });
+      };
+
+      const nextFeature = () => {
+        featureIndex = (featureIndex + 1) % featureSlides.length;
+        renderFeature();
+      };
+
+      const prevFeature = () => {
+        featureIndex = (featureIndex - 1 + featureSlides.length) % featureSlides.length;
+        renderFeature();
+      };
+
+      const startFeature = () => {
+        clearInterval(featureTimer);
+        featureTimer = window.setInterval(nextFeature, 4200);
+      };
+
+      featureControls.querySelector('.fb-next')?.addEventListener('click', () => { nextFeature(); startFeature(); });
+      featureControls.querySelector('.fb-prev')?.addEventListener('click', () => { prevFeature(); startFeature(); });
+      featureBanner.addEventListener('mouseenter', () => clearInterval(featureTimer));
+      featureBanner.addEventListener('mouseleave', startFeature);
+
+      renderFeature();
+      startFeature();
+    }
+
+    const heroSlider = document.querySelector('.hero-slider');
+    const heroSlides = heroSlider ? Array.from(heroSlider.querySelectorAll('.hero-slide')) : [];
+    if (heroSlider && heroSlides.length > 1 && !heroSlider.nextElementSibling?.classList.contains('hero-slider-controls')) {
+      const controls = document.createElement('div');
+      controls.className = 'hero-slider-controls';
+      controls.innerHTML = '<button type="button" class="hero-prev" aria-label="Previous slide"><</button><button type="button" class="hero-next" aria-label="Next slide">></button>';
+      heroSlider.insertAdjacentElement('afterend', controls);
+
+      let heroIndex = 0;
+      let heroTimer;
+
+      const renderHero = () => {
+        heroSlides.forEach((slide, i) => {
+          slide.classList.toggle('is-active', i === heroIndex);
+        });
+      };
+
+      const nextHero = () => {
+        heroIndex = (heroIndex + 1) % heroSlides.length;
+        renderHero();
+      };
+
+      const prevHero = () => {
+        heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+        renderHero();
+      };
+
+      const startHero = () => {
+        clearInterval(heroTimer);
+        heroTimer = window.setInterval(nextHero, 3600);
+      };
+
+      controls.querySelector('.hero-next')?.addEventListener('click', () => { nextHero(); startHero(); });
+      controls.querySelector('.hero-prev')?.addEventListener('click', () => { prevHero(); startHero(); });
+      heroSlider.addEventListener('mouseenter', () => clearInterval(heroTimer));
+      heroSlider.addEventListener('mouseleave', startHero);
+
+      renderHero();
+      startHero();
+    }
+
     if (quickStats && !document.querySelector('.pub-highlights')) {
       const strip = document.createElement('section');
       strip.className = 'pub-highlights';

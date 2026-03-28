@@ -1,0 +1,53 @@
+<svg width="320" height="300" viewBox="0 0 320 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bookBlue" x1="42" y1="150" x2="154" y2="276" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2D88D5"/>
+      <stop offset="1" stop-color="#0F4A87"/>
+    </linearGradient>
+    <linearGradient id="bookGreen" x1="164" y1="136" x2="284" y2="266" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8FD247"/>
+      <stop offset="1" stop-color="#2D8B2C"/>
+    </linearGradient>
+    <linearGradient id="globeBlue" x1="108" y1="34" x2="172" y2="118" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#40A0E5"/>
+      <stop offset="1" stop-color="#1C67B9"/>
+    </linearGradient>
+    <linearGradient id="globeGreen" x1="170" y1="32" x2="234" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#98DA4D"/>
+      <stop offset="1" stop-color="#58B83B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="320" height="300" fill="white"/>
+
+  <path d="M40 170V242C76 225 111 221 160 238V162C116 145 81 148 40 170Z" fill="url(#bookBlue)"/>
+  <path d="M160 162V238C209 221 244 225 280 242V170C239 148 204 145 160 162Z" fill="url(#bookGreen)"/>
+  <path d="M58 178V223C90 208 121 207 150 215" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <path d="M262 178V223C230 208 199 207 170 215" stroke="white" stroke-width="9" stroke-linecap="round"/>
+  <path d="M160 161V257" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M160 257L140 224" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <path d="M160 257L180 224" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <path d="M40 241C79 223 119 222 160 240C201 222 241 223 280 241V274C242 257 202 257 160 274C118 257 78 257 40 274V241Z" fill="#12518F"/>
+  <path d="M40 241C79 223 119 222 160 240C201 222 241 223 280 241" stroke="white" stroke-width="7" stroke-linecap="round"/>
+
+  <circle cx="160" cy="100" r="53" fill="url(#globeBlue)"/>
+  <path d="M160 47C189.271 47 213 70.7289 213 100C213 129.271 189.271 153 160 153V47Z" fill="url(#globeGreen)"/>
+  <circle cx="160" cy="100" r="53" stroke="white" stroke-width="4"/>
+  <path d="M107 100H213" stroke="white" stroke-width="4"/>
+  <path d="M116 73H204" stroke="white" stroke-width="4"/>
+  <path d="M116 127H204" stroke="white" stroke-width="4"/>
+  <path d="M160 47C146 61 138 79 138 100C138 121 146 139 160 153" stroke="white" stroke-width="4"/>
+  <path d="M160 47C174 61 182 79 182 100C182 121 174 139 160 153" stroke="white" stroke-width="4"/>
+
+  <ellipse cx="176" cy="109" rx="101" ry="30" transform="rotate(-28 176 109)" stroke="#85CC46" stroke-width="9"/>
+  <ellipse cx="170" cy="113" rx="98" ry="29" transform="rotate(-28 170 113)" stroke="white" stroke-width="11"/>
+  <path d="M80 144C121 145 166 128 221 92C247 75 271 61 292 53" stroke="white" stroke-width="5" stroke-linecap="round"/>
+
+  <g fill="#80CD47">
+    <path d="M246 25L250 34L259 38L250 42L246 51L242 42L233 38L242 34L246 25Z"/>
+    <path d="M268 43L271 49L278 52L271 55L268 62L265 55L258 52L265 49L268 43Z"/>
+    <path d="M224 39L226.5 45L233 47.5L226.5 50L224 56L221.5 50L215 47.5L221.5 45L224 39Z"/>
+    <path d="M232 171L235 177L242 180L235 183L232 190L229 183L222 180L229 177L232 171Z"/>
+    <path d="M255 179L257.5 185L264 187.5L257.5 190L255 196L252.5 190L246 187.5L252.5 185L255 179Z"/>
+  </g>
+</svg>

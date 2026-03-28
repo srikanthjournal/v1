@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const fallbackData = {
     articles: [
       {
@@ -131,7 +131,7 @@
       const title = wrap.dataset.title || '';
       const authors = wrap.dataset.authors || '';
       const year = wrap.dataset.year || '2025';
-      const citationApa = `${authors} (${year}). ${title}. IJSRA. https://doi.org/${doi}`;
+      const citationApa = `${authors} (${year}). ${title}. IJSRI. https://doi.org/${doi}`;
 
       const copy = (txt) => navigator.clipboard?.writeText(txt).catch(() => {});
 
@@ -139,12 +139,12 @@
       wrap.querySelector('[data-action="copy-apa"]')?.addEventListener('click', () => copy(citationApa));
 
       wrap.querySelector('[data-action="download-bibtex"]')?.addEventListener('click', () => {
-        const bib = `@article{${doi.replace(/[^a-zA-Z0-9]/g, '')},\n  title={${title}},\n  author={${authors}},\n  journal={IJSRA},\n  year={${year}},\n  doi={${doi}}\n}`;
+        const bib = `@article{${doi.replace(/[^a-zA-Z0-9]/g, '')},\n  title={${title}},\n  author={${authors}},\n  journal={IJSRI},\n  year={${year}},\n  doi={${doi}}\n}`;
         downloadFile('citation.bib', bib);
       });
 
       wrap.querySelector('[data-action="download-ris"]')?.addEventListener('click', () => {
-        const ris = `TY  - JOUR\nTI  - ${title}\nAU  - ${authors}\nPY  - ${year}\nJO  - IJSRA\nDO  - ${doi}\nER  -`;
+        const ris = `TY  - JOUR\nTI  - ${title}\nAU  - ${authors}\nPY  - ${year}\nJO  - IJSRI\nDO  - ${doi}\nER  -`;
         downloadFile('citation.ris', ris);
       });
     });
@@ -159,3 +159,4 @@
 
   run();
 })();
+

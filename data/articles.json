@@ -1,0 +1,65 @@
+{
+  "journal": {
+    "name": "IJSRI",
+    "baseUrl": "https://example.org"
+  },
+  "articles": [
+    {
+      "id": "deep-learning-2025-0201",
+      "title": "Deep Learning Approaches for Medical Image Classification: A Comprehensive Survey",
+      "authors": "A. Jain, Lorenzo, Marcel Chen, David Wilson",
+      "abstract": "Survey of deep learning techniques applied to medical image diagnostics, covering CNNs, transfer learning, and benchmark datasets.",
+      "doi": "10.1234/ijkl.2025.0201",
+      "pages": "1-18",
+      "volume": 3,
+      "issue": 2,
+      "year": 2025,
+      "status": "published",
+      "slug": "Article-DeepLearning.html",
+      "pdf": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+    },
+    {
+      "id": "smart-cities-2025-0202",
+      "title": "Sustainable Energy Solutions for Smart Cities: An IoT-based Framework",
+      "authors": "B. Kumar, Rodriguez, Santos, Elly Park",
+      "abstract": "IoT architecture for energy optimization and carbon reduction in urban environments.",
+      "doi": "10.1234/ijkl.2025.0202",
+      "pages": "19-32",
+      "volume": 3,
+      "issue": 2,
+      "year": 2025,
+      "status": "published",
+      "slug": "Article-SmartCities.html",
+      "pdf": "https://www.africau.edu/images/default/sample.pdf"
+    },
+    {
+      "id": "nlp-social-2025-0203",
+      "title": "Natural Language Processing for Sentiment Analysis in Social Media",
+      "authors": "K. Robert M., Lisa Zhang",
+      "abstract": "Transformer-based sentiment analysis model with improved F1-score on benchmark social datasets.",
+      "doi": "10.1234/ijkl.2025.0203",
+      "pages": "33-48",
+      "volume": 3,
+      "issue": 2,
+      "year": 2025,
+      "status": "published",
+      "slug": "Article-NLP.html",
+      "pdf": "https://gahp.net/wp-content/uploads/2017/09/sample.pdf"
+    }
+  ],
+  "onlineFirst": [
+    {
+      "title": "Federated Learning for Privacy-Preserving Healthcare Models",
+      "authors": "L. Hart, P. Menon, J. Kim",
+      "doi": "10.1234/ijkl.2025.of01",
+      "status": "In Press"
+    },
+    {
+      "title": "Edge AI for Real-Time Industrial Fault Detection",
+      "authors": "M. Ortega, S. Basu",
+      "doi": "10.1234/ijkl.2025.of02",
+      "status": "In Press"
+    }
+  ]
+}
+
